@@ -28,7 +28,7 @@ namespace microbitarduino {
     }
      
      
-    //% blockId=setdigital block="digital pin  %pin | to %XY"
+    //% blockId=setdigital block="set digital pin  %pin | value as %XY"
     //% weight=100
     export function setdigital(pin: number, XY: value): string {
         return "digitalWrite("+pin.toString()+","+XY.toString()+")\n";    
