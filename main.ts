@@ -1,17 +1,17 @@
 //% weight=0 color=#3CB371 icon="\uf0ad"
-namespace microbitarduino {
+namespace microbitnodemcu {
 
      
       export enum digitalpin {
-        D0 = 0,
-        D1 = 1,
-        D2 = 2,
-        D3 = 3,
-        D4 = 4,
-        D5 = 5,
-        D6 = 6,
-        D7 = 7,
-        D8 = 8
+        D0 = 16,
+        D1 = 5,
+        D2 = 4,
+        D3 = 0,
+        D4 = 2,
+        D5 = 14,
+        D6 = 12,
+        D7 = 13,
+        D8 = 15
      }
       export enum type {
         INPUT = 2,
@@ -30,7 +30,7 @@ namespace microbitarduino {
      
     //% blockId=setdigital block="set digital pin  %pin | value as %XY"
     //% weight=100
-    export function setdigital(pin: number, XY: value): string {
+    export function setdigital(pin: digitalpin, XY: value): string {
         return "digitalWrite("+pin.toString()+","+XY.toString()+")\n";    
     }
 }
