@@ -1,4 +1,4 @@
-# JoyStick
+# microbitarduino
 
 Micro:Bit搖桿專用積木
 
@@ -12,5 +12,5 @@ MIT
 (The metadata above is needed for package search.)
 
 ```package
-JoyStick=github:crouse12/JoyStick
+microbitarduino=github:crouse12/microbitarduino
 ```
