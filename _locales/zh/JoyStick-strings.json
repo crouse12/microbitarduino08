@@ -9,7 +9,7 @@
     "JoyStick.button.A|block": "A鍵",
     "JoyStick.button.B|block": "B鍵",
     "JoyStick.button.SW|block": "SW鍵",
-    "JoyStick.getXY|block": "搖桿的 %joystickXY",
+    "JoyStick.setdigital|block": "搖桿的 %joystickXY |為 %XY",
     "JoyStick.setmotor|block": "設定震動馬達為 %value",
     "JoyStick.motor.OFF|block": "關閉",
     "JoyStick.motor.ON|block": "開啟",
