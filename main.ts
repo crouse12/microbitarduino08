@@ -23,7 +23,7 @@ namespace microbitarduino {
      }
      //% blockId=setpinmode block="set digital pin %pin | for %XY"
     //% weight=100
-    export function setpinmode(pin: digitalpin, XY: number): string {
+    export function setpinmode(pin: digitalpin, XY: type): string {
         return "pinMode("+pin.toString()+","+XY.toString()+")\n";    
     }
      
