@@ -1,36 +1,35 @@
 //% weight=0 color=#3CB371 icon="\uf0ad"
 namespace microbitarduino {
-        export enum button {
-        //% block="A"
-        A,
-        //% block="B"
-        B,
-        //% block="C"
-        C,
-        //% block="D"
-        D,
-        //% block="E"
-        E,
-        //% block="F"
-        F,
-        //% block="SW"
-        SW
+        export enum pin {
+        //% block="0"
+        "0",
+        //% block="1"
+        "1",
+        //% block="2"
+        "2",
+        //% block="3"
+        "3",
+        //% block="4"
+        "4",
+        //% block="5"
+        "5",
+        //% block="6"
+        "6",
+        //% block="7"
+        "7",
+        //% block="8"
+        "8",
    }
        export enum XY {
         //% block="X"
-        X,
+        "X",
         //% block="Y"
-        Y
+        "Y"
     } 
-     //% blockId=getXY block="Joystick's  %joystickXY"
+     //% blockId=setdigital block="Joystick's  %pin | for %XY"
     //% weight=100
-    export function getXY(joystickXY: XY): number {
-        switch (joystickXY) {
-            case XY.X: 
-                return (1023 - pins.analogReadPin(AnalogPin.P2));
-            case XY.Y: 
-                return pins.analogReadPin(AnalogPin.P1);
-        }
+    export function setdigital(pin: XY): string {
+        return "pinMode"+pin+XY;    
     }
     
 }
