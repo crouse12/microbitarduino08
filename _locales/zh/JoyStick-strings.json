@@ -1,5 +1,5 @@
 {
-    "JoyStick|block": "搖桿",
+    "microbitarduino|block": "控制arduino",
     "JoyStick.XY.X|block": "X軸",
     "JoyStick.XY.Y|block": "Y軸", 
     "JoyStick.button.C|block": "C鍵",
