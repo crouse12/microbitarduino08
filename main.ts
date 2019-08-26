@@ -24,13 +24,13 @@ namespace microbitnodemcu {
      //% blockId=setpinmode block="set digital pin %pin | for %XY"
     //% weight=100
     export function setpinmode(pin: digitalpin, XY: type): string {
-        return "pinMode("+pin.toString()+","+XY.toString()+")\n";    
+        return "pinMode("+pin.toString()+","+XY.toString()+")\\n";    
     }
      
      
     //% blockId=setdigital block="set digital pin  %pin | value as %XY"
     //% weight=100
     export function setdigital(pin: digitalpin, XY: value): string {
-        return "digitalWrite("+pin.toString()+","+XY.toString()+")\n";    
+        return "digitalWrite("+pin.toString()+","+XY.toString()+")\\n";    
     }
 }
