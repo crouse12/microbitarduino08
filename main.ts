@@ -1,18 +1,16 @@
 //% weight=0 color=#3CB371 icon="\uf0ad"
 namespace microbitarduino {
 
-     //% blockId=setpinmode block="Joystick's  %pin | for %XY"
+     //% blockId=setpinmode block="set digital pin %pin | for %XY"
     //% weight=100
-        //%pin
-    export function setpinmode(pin: string, XY: string): string {
+    export function setpinmode(pin: number, XY: number): string {
         return "pinMode("+pin.toString()+","+XY.toString()+")\n";    
     }
      
      
-    //% blockId=setdigital block="Joystick's  %pin | for %XY"
+    //% blockId=setdigital block="digital pin  %pin | to %XY"
     //% weight=100
-        //%pin
-    export function setdigital(pin: string, XY: string): string {
+    export function setdigital(pin: number, XY: number): string {
         return "digitalWrite("+pin.toString()+","+XY.toString()+")\n";    
     }
 }
