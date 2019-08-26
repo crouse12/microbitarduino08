@@ -22,14 +22,14 @@ namespace microbitnodemcu {
         LOW = 0
      }
 
-    //% blockId=setpinmode1 block="set digital pin %pin | for %XY"
+    //% blockId=setpinmode1 block="set nodemcu digital pin %pin | for %XY"
     //% weight=102
     export function setpinmode1(pin: digitalpin, XY: type):void {
        serial.writeLine("pinMode="+pin.toString()+","+XY.toString()+"\\n")    
     }
      
      
-    //% blockId=setdigital1 block="set digital pin  %pin | value as %XY"
+    //% blockId=setdigital1 block="set nodemcu digital pin  %pin | value as %XY"
     //% weight=101
     export function setdigital1(pin: digitalpin, XY: value):void {
         serial.writeLine("digitalWrite="+pin.toString()+","+XY.toString()+"\\n")    
