@@ -1,4 +1,4 @@
-//% weight=0 color=#3CB371 icon="\uf0ad"
+//% weight=0 color=#3CB371 icon="\uf0ad" block="Microbitnodemcu"
 namespace microbitnodemcu {
 
      
