@@ -28,7 +28,7 @@ namespace microbitnodemcu {
     }
      
      
-    //% blockId=setdigital1 block="set digital pin  %pin | value as %XY"
+    //% blockId=setdigital block="set digital pin  %pin | value as %XY"
     //% weight=103
     export function setdigital(pin: digitalpin, XY: value) {
         return "digitalWrite="+pin.toString()+","+XY.toString()+"\\n";    
