@@ -1,6 +1,6 @@
 //% weight=0 color=#3CB371 icon="\uf0ad"
 namespace microbitarduino {
-        export enum pin {
+        export enum pin1 {
         //% block="0"
         "0",
         //% block="1"
@@ -20,7 +20,7 @@ namespace microbitarduino {
         //% block="8"
         "8",
    }
-       export enum XY {
+       export enum XY1 {
         //% block="X"
         "X",
         //% block="Y"
@@ -28,7 +28,7 @@ namespace microbitarduino {
     } 
      //% blockId=setdigital block="Joystick's  %pin | for %XY"
     //% weight=100
-    export function setdigital(pin: XY): string {
+    export function setdigital(pin: pin1, XY: XY1): string {
         return "pinMode"+pin+XY;    
     }
     
