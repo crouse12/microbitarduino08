@@ -1,5 +1,7 @@
 {
     "microbitnodemcu|block": "控制nodemcu",
     "microbitnodemcu.setpinmode|block": "設定數位腳位 %pin|為 %XY",
-    "microbitnodemcu.setdigital|block": "數位腳位 %pin|的值為 %XY"
+    "microbitnodemcu.setdigital|block": "數位腳位 %pin|的值為 %XY",
+    "microbitnodemcu.setpinmode1|block": "設定數位腳位 %pin|為 %XY",
+    "microbitnodemcu.setdigital1|block": "數位腳位 %pin|的值為 %XY"
 }
