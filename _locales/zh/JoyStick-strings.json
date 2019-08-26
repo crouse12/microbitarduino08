@@ -1,17 +1,5 @@
 {
     "microbitarduino|block": "控制arduino",
-    "JoyStick.XY.X|block": "X軸",
-    "JoyStick.XY.Y|block": "Y軸", 
-    "JoyStick.button.C|block": "C鍵",
-    "JoyStick.button.D|block": "D鍵",
-    "JoyStick.button.E|block": "E鍵",
-    "JoyStick.button.F|block": "F鍵",
-    "JoyStick.button.A|block": "A鍵",
-    "JoyStick.button.B|block": "B鍵",
-    "JoyStick.button.SW|block": "SW鍵",
-    "JoyStick.setdigital|block": "搖桿的 %joystickXY |為 %XY",
-    "JoyStick.setmotor|block": "設定震動馬達為 %value",
-    "JoyStick.motor.OFF|block": "關閉",
-    "JoyStick.motor.ON|block": "開啟",
-    "JoyStick.getbutton|block": "搖桿按鈕 %ABCDEF"
+    "microbitarduino.setpinmode|block": "設定數位腳位 %pin |為 %XY",
+    "microbitarduino.setdigital|block": "數位腳位 %pin |的值為 %XY",
 }
