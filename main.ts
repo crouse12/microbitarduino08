@@ -13,6 +13,14 @@ namespace microbitarduino {
         D7 = 7,
         D8 = 8
      }
+      export enum type {
+        INPUT = 2,
+        OUTPUT = 1
+     }
+     export enum value {
+        HIGH = 1,
+        LOW = 0
+     }
      //% blockId=setpinmode block="set digital pin %pin | for %XY"
     //% weight=100
     export function setpinmode(pin: digitalpin, XY: number): string {
@@ -22,7 +30,7 @@ namespace microbitarduino {
      
     //% blockId=setdigital block="digital pin  %pin | to %XY"
     //% weight=100
-    export function setdigital(pin: number, XY: number): string {
+    export function setdigital(pin: number, XY: value): string {
         return "digitalWrite("+pin.toString()+","+XY.toString()+")\n";    
     }
 }
