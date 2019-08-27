@@ -47,14 +47,14 @@ namespace microbitnodemcu {
     //% weight=101
     export function setdigital3(pin: digitalpin):string {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
-        let a=serial.readUntil(serial.delimiters(Delimiters.NewLine)
+        let a=serial.readUntil(serial.delimiters(Delimiters.NewLine))
         return a;
     }
     //% blockId=setdigital4 block="read nodemcu analog pin  %pin value"
     //% weight=101 
     export function setdigital4(pin: analogpin):string {
         serial.writeLine("analogRead="+pin.toString()+"\\n")
-        let a=serial.readUntil(serial.delimiters(Delimiters.NewLine)
+        let a=serial.readUntil(serial.delimiters(Delimiters.NewLine))
         return a;
     }
 }
