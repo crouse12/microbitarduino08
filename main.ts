@@ -35,5 +35,10 @@ namespace microbitnodemcu {
         serial.writeLine("digitalWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
      
+    //% blockId=setdigital2 block="set nodemcu digital pin  %pin | PWM value as %XY"
+    //% weight=101
+    export function setdigital1(pin: digitalpin, XY: value):void {
+        serial.writeLine("analogWrite="+pin.toString()+","+XY.toString()+"\\n")    
+    }
     
 }
