@@ -58,12 +58,7 @@ namespace microbitnodemcu {
         basic.pause(10)
         let a=serial.readString()
         return a
-    }
-     /**
-     * send message to thingspeak
-     * @param key      , eg: "key"
-     * @param value    , eg: "0"
-     */      
+    }   
     //% blockId=thingspeak block="thingspeak  %key | value %value "
     //% weight=101 value=10  key=key
     export function thingspeak(key: string,value: number) {
