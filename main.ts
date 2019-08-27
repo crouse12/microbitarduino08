@@ -42,7 +42,7 @@ namespace microbitnodemcu {
     export function setdigital2(pin: digitalpin, XY: number):void {
         serial.writeLine("analogWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
-    
+ 
     //% blockId=setdigital3 block="read nodemcu digital pin  %pin value"
     //% weight=101
     export function setdigital3(pin: digitalpin):string {
@@ -58,5 +58,16 @@ namespace microbitnodemcu {
         basic.pause(10)
         let a=serial.readString()
         return a;
+    }
+     /**
+     * send message to thingspeak
+     * @param key      , eg: "key"
+     * @param value    , eg: 0
+     */      
+    //% blockId=thingspeak block="thingspeak  %key | value %value "
+    //% weight=101 value=10  key=key
+    export function thingspeak(key: string,value: number) {
+        serial.writeLine("httpclientget2=api.thingspeak.com,,,,/update?api_key="+key+"&field1="+value.toString()+"\\n")
+  
     }
 }
