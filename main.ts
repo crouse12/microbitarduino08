@@ -62,12 +62,11 @@ namespace microbitnodemcu {
      /**
      * send message to thingspeak
      * @param key      , eg: "key"
-     * @param value    , eg: 0
+     * @param value    , eg: "0"
      */      
     //% blockId=thingspeak block="thingspeak  %key | value %value "
     //% weight=101 value=10  key=key
-    export function thingspeak(key: string,value: number):string {
-        serial.writeLine("httpclientget2=api.thingspeak.com,,,,/update?api_key="+key+"&field1="+value.toString()+"\\n")
-        return "httpclientget2=api.thingspeak.com,,,,/update?api_key="+key+"&field1="+value.toString()+"\\n"
+    export function thingspeak(key: string,value: string) {
+        serial.writeLine("httpclientget2=api.thingspeak.com,,,,/update?api_key="+key+"&field1="+value+"\\n")
     }
 }
