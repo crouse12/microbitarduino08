@@ -57,7 +57,7 @@ namespace microbitnodemcu {
         serial.writeLine("analogRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
-        return a;
+        return a
     }
      /**
      * send message to thingspeak
@@ -66,8 +66,8 @@ namespace microbitnodemcu {
      */      
     //% blockId=thingspeak block="thingspeak  %key | value %value "
     //% weight=101 value=10  key=key
-    export function thingspeak(key: string,value: number) {
+    export function thingspeak(key: string,value: number):string {
         serial.writeLine("httpclientget2=api.thingspeak.com,,,,/update?api_key="+key+"&field1="+value.toString()+"\\n")
-  
+        return "httpclientget2=api.thingspeak.com,,,,/update?api_key="+key+"&field1="+value.toString()+"\\n"
     }
 }
