@@ -1,6 +1,8 @@
 //% weight=0 color=#3CB371 icon="\uf0ad" block="Microbitnodemcu"
 namespace microbitnodemcu {
-
+      export enum analogpin {
+        A0 = 16
+     }
      
       export enum digitalpin {
         D0 = 16,
@@ -41,4 +43,18 @@ namespace microbitnodemcu {
         serial.writeLine("analogWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
     
+    //% blockId=setdigital3 block="read nodemcu digital pin  %pin "
+    //% weight=101
+    export function setdigital3(pin: digitalpin):string {
+        serial.writeLine("digitalRead="+pin.toString()+"\\n")
+        let a=serial.readUntil(serial.delimiters(Delimiters.NewLine)
+        return a;
+    }
+    //% blockId=setdigital4 block="read nodemcu analog pin  %pin "
+    //% weight=101 
+    export function setdigital4(pin: analogpin):string {
+        serial.writeLine("analogRead="+pin.toString()+"\\n")
+        let a=serial.readUntil(serial.delimiters(Delimiters.NewLine)
+        return a;
+    }
 }
