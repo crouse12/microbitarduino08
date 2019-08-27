@@ -66,7 +66,7 @@ namespace microbitnodemcu {
      */      
     //% blockId=thingspeak block="thingspeak  %key | value %value "
     //% weight=101 value=10  key=key
-    export function thingspeak(key: string,value: string) {
-        serial.writeLine("httpclientget2=api.thingspeak.com,,,,/update?api_key="+key+"&field1="+value+"\\n")
+    export function thingspeak(key: string,value: number) {
+        serial.writeLine("thinkspeak="key+","+value.toString()+"\\n")
     }
 }
