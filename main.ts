@@ -29,6 +29,8 @@ namespace microbitnodemcu {
     //% tx.defl=SerialPin.P0
     //% rx.defl=SerialPin.P1
     //% weight=99
+        //% blockGap=8
+  //% blockExternalInputs = 1
     export function connectWifi(tx: SerialPin, rx: SerialPin, baudrate: BaudRate) {
         serial.redirect(
             tx,
