@@ -87,7 +87,7 @@ namespace microbitnodemcu {
         let a=value1.length
         let b=""
         let i
-        for (i=0;i<a-1;i++)
+        for (i=0;i<a;i++)
         {
               if (i==0)
               {
