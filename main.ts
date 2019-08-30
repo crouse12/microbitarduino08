@@ -25,7 +25,7 @@ namespace microbitnodemcu {
      }
 
 
-    //% block="Initialize Nodemcu |TX %tx|RX %rx|Baud rate %baudrate "
+    //% blockId=setNodemcu block="Initialize Nodemcu |TX %tx|RX %rx|Baud rate %baudrate "
     //% tx.defl=SerialPin.P0
     //% rx.defl=SerialPin.P1
     //% weight=101
@@ -41,7 +41,7 @@ namespace microbitnodemcu {
       
       
     //% blockId=setpinmode1 block="set nodemcu digital pin %pin | for %XY"
-    //% weight=102
+    //% weight=101
     export function setpinmode1(pin: digitalpin, XY: type):void {
        serial.writeLine("pinMode="+pin.toString()+","+XY.toString()+"\\n")    
     }
