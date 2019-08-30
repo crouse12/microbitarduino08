@@ -28,7 +28,7 @@ namespace microbitnodemcu {
     //% block="Initialize Nodemcu |TX %tx|RX %rx|Baud rate %baudrate "
     //% tx.defl=SerialPin.P0
     //% rx.defl=SerialPin.P1
-    //% weight=99
+    //% weight=101
     //% blockExternalInputs = 1
     export function setNodemcu(tx: SerialPin, rx: SerialPin, baudrate: BaudRate) {
         serial.redirect(
