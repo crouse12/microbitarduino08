@@ -74,9 +74,15 @@ namespace microbitnodemcu {
         let a=serial.readString()
         return a
     }   
-    //% blockId=thingspeak block="thingspeak  %key | field1 value %value1 "
+    //% blockId=thingspeak block="thingspeak  %key "
     //% weight=101 
-    export function thingspeak(key: string,value1: string) {
-        serial.writeString("t="+key+","+value1+"\\n")
+    export function thingspeak(key: string) {
+        serial.writeString("key="+key+","+value1+"\\n")
+    }
+      
+    //% blockId=thingspeak block="thingspeak  field1 value %value1 "
+    //% weight=101 
+    export function thingspeak(value1: string) {
+        serial.writeString("t="+value1+"\\n")
     }
 }
