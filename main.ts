@@ -80,9 +80,9 @@ namespace microbitnodemcu {
         serial.writeLine("key="+key+"\\n")
     }
       
-    //% blockId=thingspeak1 block="thingspeak field1 value %value1 "
+    //% blockId=thingspeak1 block="thingspeak key %key | field1 value %value1 "
     //% weight=101 
-    export function thingspeak1(value1: string) {
-        serial.writeLine("t="+value1+"\\n")
+    export function thingspeak1(key:string, value1: string) {
+        serial.writeLine("t="+key+","+value1+"\\n")
     }
 }
