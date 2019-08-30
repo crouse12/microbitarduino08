@@ -99,5 +99,7 @@ namespace microbitnodemcu {
               }
         }
         serial.writeLine("t="+key+","+b+"\\n")
+        basic.showString("t="+key+","+b+"\\n")
+
     }
 }
