@@ -93,7 +93,7 @@ namespace microbitnodemcu {
                     b=value1[0]
               }else
               {
-                    c=i+1
+                    let c=i+1
                     b=b+"&field"+c.toString()+"="+value1[i]
               }
         }
