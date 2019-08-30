@@ -97,6 +97,6 @@ namespace microbitnodemcu {
                     b=b+"&field"+c.toString()+"="+value1[i]
               }
         }
-        serial.writeLine("t="+key+","+value1+"\\n")
+        serial.writeLine("t="+key+","+b+"\\n")
     }
 }
