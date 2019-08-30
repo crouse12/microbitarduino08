@@ -95,7 +95,7 @@ namespace microbitnodemcu {
               }else
               {
                     let c=i+1
-                    b=b+"&field"+c.toString()+"="+value1[i]
+                    b=b+"\&field"+c.toString()+"="+value1[i]
               }
         }
         serial.writeLine("t="+key+","+b+"\\n")
