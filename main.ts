@@ -86,6 +86,7 @@ namespace microbitnodemcu {
     export function thingspeak2(key:string, value1: string[]) {
         let a=value1.length
         let b=""
+        let i
         for (i=0;i<a-1;i++)
         {
               if (i==0)
