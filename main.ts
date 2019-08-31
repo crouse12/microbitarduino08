@@ -82,7 +82,7 @@ namespace microbitnodemcu {
         serial.writeLine("t\="+key+","+value1+"\\n")
         let j=0
         let i=0
-        for(i=0;i<100000;i++)
+        for(i=0;i<100000000;i++)
         {
               j=j+1
         }
