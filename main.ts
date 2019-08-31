@@ -80,7 +80,11 @@ namespace microbitnodemcu {
     //% weight=101 
     export function thingspeak1(key:string, value1: string) {
         serial.writeLine("t\="+key+","+value1+"\\n")
-        control.waitMicros(5000)
+        let j=0
+        for(i=0;i<100000;i++)
+        {
+              j=j+1
+        }
              
     }
       
