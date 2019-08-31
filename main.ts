@@ -84,7 +84,7 @@ namespace microbitnodemcu {
       
     //% blockId=thingspeak2 block="thingspeak key %key | fields value %value1 "
     //% weight=101 
-    export function thingspeak2(key:string, value1: number[]=["10","20","30"]) {
+    export function thingspeak2(key:string, value1: string[]=["10","20","30"]) {
         let a=value1.length
         let b=""
         let i
