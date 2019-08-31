@@ -101,6 +101,5 @@ namespace microbitnodemcu {
               }
         }
         serial.writeLine("t\="+key+","+b+"\\n")
-        basic.pause(16000)
     }
 }
