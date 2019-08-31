@@ -79,12 +79,12 @@ namespace microbitnodemcu {
     //% blockId=thingspeak1 block="thingspeak key %key | field1 value %value1 "
     //% weight=101 
     export function thingspeak1(key:string, value1: string) {
-        serial.writeLine("t="+key+","+value1+"\\n")
+        serial.writeLine("t\="+key+","+value1+"\\n")
     }
       
     //% blockId=thingspeak2 block="thingspeak key %key | fields value %value1 "
     //% weight=101 
-    export function thingspeak2(key:string, value1: string[]) {
+    export function thingspeak2(key:string, value1: string[]=[10,20,30]) {
         let a=value1.length
         let b=""
         let i
