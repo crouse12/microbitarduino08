@@ -36,7 +36,7 @@ namespace microbitnodemcu {
             rx,
             baudrate
         )
-        basic.pause(100)
+        basic.pause(1000)
     }
       
       
