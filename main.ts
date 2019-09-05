@@ -65,7 +65,7 @@ namespace microbitnodemcu {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
-        return a;
+        return parseFloat(a)
     }
     //% blockId=setdigital4 block="read nodemcu analog pin  %pin value"
     //% weight=101 
@@ -74,7 +74,7 @@ namespace microbitnodemcu {
         basic.pause(10)
         let a=serial.readString()
         a=a.substr(0, a.length - 2)
-        return a
+        return parseFloat(a)
     }   
       
     //% blockId=thingspeak1 block="thingspeak key %key | field1 value %value1 "
