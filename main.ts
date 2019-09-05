@@ -65,7 +65,6 @@ namespace microbitnodemcu {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
-        a=a.substr(0, a.length - 2)
         return a;
     }
     //% blockId=setdigital4 block="read nodemcu analog pin  %pin value"
