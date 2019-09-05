@@ -61,7 +61,7 @@ namespace microbitnodemcu {
  
     //% blockId=setdigital3 block="read nodemcu digital pin  %pin value"
     //% weight=101
-    export function setdigital3(pin: digitalpin):number {
+    export function setdigital3(pin: digitalpin): number {
         serial.writeLine("digitalRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
@@ -69,7 +69,7 @@ namespace microbitnodemcu {
     }
     //% blockId=setdigital4 block="read nodemcu analog pin  %pin value"
     //% weight=101 
-    export function setdigital4(pin: analogpin):number {
+    export function setdigital4(pin: analogpin): number {
         serial.writeLine("analogRead="+pin.toString()+"\\n")
         basic.pause(10)
         let a=serial.readString()
