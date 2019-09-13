@@ -46,7 +46,7 @@ namespace microbitnodemcu {
         STA = 1,
         AP = 0
      }
-      
+        //% group="Setup"  
     //% blockId=setMicrobit block="Initialize Microbit |TX %tx|RX %rx|Baud rate %baudrate "
     //% tx.defl=SerialPin.P0
     //% rx.defl=SerialPin.P1
@@ -60,7 +60,7 @@ namespace microbitnodemcu {
         )
         basic.pause(1000)
     }
-
+    //% group="Setup"
     //% blockId=setWiFi block="Set Nodemcu | SSID %SSID| Pass %PASS| Mode %mode1 "
     //% weight=101
     //% blockExternalInputs = 1
@@ -83,26 +83,26 @@ namespace microbitnodemcu {
             iii=iii+1
         }
     }
-      
+    //% group="Nodemcu_Control"  
     //% blockId=setpinmode1 block="Set nodemcu digital pin %pin | for %XY"
     //% weight=101
     export function setpinmode1(pin: digitalpin, XY: type):void {
        serial.writeLine("pinMode="+pin.toString()+","+XY.toString()+"\\n")    
     }
      
-     
+    //% group="Nodemcu_Control" 
     //% blockId=setdigital1 block="Set nodemcu digital pin  %pin | value to %XY"
     //% weight=101
     export function setdigital1(pin: digitalpin, XY: value):void {
         serial.writeLine("digitalWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
-     
+    //% group="Nodemcu_Control"     
     //% blockId=setdigital2 block="Set nodemcu digital pin  %pin | PWM value to %XY"
     //% weight=101
     export function setdigital2(pin: digitalpin, XY: number):void {
         serial.writeLine("analogWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
- 
+    //% group="Nodemcu_Control" 
     //% blockId=setdigital3 block="Read nodemcu digital pin  %pin value"
     //% weight=101
     export function setdigital3(pin: digitalpin):number {
@@ -111,6 +111,7 @@ namespace microbitnodemcu {
         let a=serial.readString()
         return parseFloat(a);
     }
+    //% group="Nodemcu_Control"
     //% blockId=setdigital4 block="Read nodemcu analog pin  %pin value"
     //% weight=101 
     export function setdigital4(pin: analogpin):number {
@@ -120,7 +121,7 @@ namespace microbitnodemcu {
         a=a.substr(0, a.length - 2)
         return parseFloat(a)
     }   
-      
+    //% group="Thingspeak"      
     //% blockId=thingspeak1 block="Connect to Thingspeak key %key | Write Field1 value %value1 "
     //% weight=101 
     export function thingspeak1(key:string, value1: string) {
@@ -128,7 +129,7 @@ namespace microbitnodemcu {
         serial.writeLine("t\="+key+","+value1+"\\n")
         basic.pause(4000)
     }
-            
+    //% group="Thingspeak"            
     //% blockId=thingspeak4 
     //% block="Connect to Thingspeak key %key | Write Fields value | Field1 value %value1 || Field2 value %value2 Field3 value %value3 Field4 value %value4 Field5 value %value5 Field6 value %value6 Field7 value %value7"
     //% weight=101  
@@ -152,7 +153,7 @@ namespace microbitnodemcu {
         serial.writeLine("t\="+key+","+b+"\\n")
         basic.pause(8000)
     }
-      
+    //% group="Thingspeak"      
     //% blockId=thingspeak2 block="Connect to Thingspeak key %key | Write Fields value %value1 "
     //% weight=101
     export function thingspeak2(key:string, value1: number[]) {
@@ -176,7 +177,7 @@ namespace microbitnodemcu {
     }
 
       
-      
+        //% group="Thingspeak"  
      //% blockId=thingspeak3 block="Connect to Thingspeak Channel ID %key | Read %value1 value"
     //% weight=101
     export function thingspeak3(key:number, value1: value555): string {
@@ -189,14 +190,14 @@ namespace microbitnodemcu {
 
     }     
       
-      
+    //% group="IFTTT"  
     //% blockId=ifttt1 block="Connect to IFTTT | API key %key | Event %event | Value1 %value1 | Value2 %value2 | Value3 %value3 "
     //% weight=101 blockExternalInputs = 1 blockGap=1
     export function ifttt1(key: string, event: string, value1: string, value2: string, value3: string) {
           check()
           serial.writeLine("ifttt="+key+","+event+","+"value1="+value1+"&value2="+value2+"&value3="+value3+",1\\n")
     }   
-
+        //% group="RFID"
     //% blockId=rfidid block="read arduino rfid id"
     //% weight=101 advanced=true
     export function rfidid():string {
