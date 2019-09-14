@@ -180,13 +180,13 @@ namespace microbitnodemcu {
         //% group="3.Thingspeak"  
      //% blockId=thingspeak3 block="Connect to Thingspeak Channel ID %key | Read %value1 value"
     //% weight=101
-    export function thingspeak3(key:number, value1: value555): string {
+    export function thingspeak3(key:number, value1: value555): number {
         check()
         serial.writeLine("tt="+convertToText(key)+","+convertToText(value1)+",1"+"\\n")
         basic.pause(100)
         let a=serial.readString()
         basic.pause(1500)
-        return a
+        return parseFloat(a)
 
     }     
       
