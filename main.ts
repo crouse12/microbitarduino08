@@ -96,7 +96,7 @@ namespace microbitnodemcu {
     export function setdigital1(pin: digitalpin, XY: value):void {
         serial.writeLine("digitalWrite="+pin.toString()+","+XY.toString()+"\\n")    
     }
-    //% group="Nodemcu_Control"     
+    //% group="2.Nodemcu_Control"     
     //% blockId=setdigital2 block="Set nodemcu digital pin  %pin | PWM value to %XY"
     //% weight=101
     export function setdigital2(pin: digitalpin, XY: number):void {
